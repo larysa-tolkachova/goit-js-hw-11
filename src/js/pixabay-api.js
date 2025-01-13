@@ -12,9 +12,7 @@ export function serviceImages(question) {
 
   return fetch(`${BASE_URL}?${params}`).then(response => {
     if (!response.ok) {
-      throw new Error(
-        'Sorry, there are no images matching your search query. Please try again!'
-      );
+      throw new Error(response.statusText);
     }
     return response.json(); //promis
   });

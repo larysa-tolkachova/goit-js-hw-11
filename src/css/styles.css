@@ -5,12 +5,11 @@
   |============================
 */
 /* Common styles */
-/* @import url('./reset.css');
+@import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
 
-*/
 *,
 *::before,
 *::after {
@@ -30,18 +29,14 @@ img {
 }
 
 .conteiner {
-  width: 1440px;
-  height: 792px;
-  top: -12px;
-  left: -648px;
-  opacity: 0px;
-  background-color: #ffffff;
-  padding: 36px auto;
 }
 
 .group-form {
   display: flex;
   gap: 8px;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
 }
 
 .input {
@@ -53,10 +48,9 @@ img {
   background-color: #ffffff;
   outline: none;
 
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: left;
   padding: 8px 16px;
@@ -81,7 +75,6 @@ img {
   border: none;
   outline: none;
 
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -95,43 +88,20 @@ img {
 }
 
 /*Spinner*/
-
 .loader {
-  border-left: 6px solid #f3f3f3; /* Light grey */
-  border-right: 6px solid #f3f3f3; /* Light grey */
-  border-top: 6px solid #3498db; /* Blue */
-  border-bottom: 6px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  text-align: center;
 }
 /* end Spinner*/
 
 /* ========================================== */
 /* render-function */
 .gallery {
-  width: 1128px;
-  height: 200px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px 24px;
 }
 
 .gallery-item {
-  width: 360px;
-  height: 200px;
-  opacity: 0px;
   border: 1px solid #808080;
 }
 
@@ -140,21 +110,19 @@ img {
 }
 
 .gallery-image {
+  display: block;
 }
 
-/* .inform {
+.inform {
   display: flex;
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
 .inform-link {
-  display: flex;
-  flex-direction: column;
 }
 
 .inform-title {
-  font-family: Montserrat;
   font-size: 12px;
   font-weight: 600;
   line-height: 16px;
@@ -164,11 +132,33 @@ img {
 }
 
 .inform-dan {
-  font-family: Montserrat;
   font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.04em;
   text-align: left;
   color: #2e2f42;
-} */
+}
+*/
+
+/* модальне вікно */
+
+div.sl-overlay {
+  background-color: #2e2f42cc;
+}
+
+.sl-wrapper button.sl-close {
+  color: #ffffff;
+}
+
+.sl-wrapper .sl-navigation button.sl-prev {
+  color: #ffffff;
+}
+
+.sl-wrapper .sl-navigation button.sl-next {
+  color: #ffffff;
+}
+
+.sl-wrapper div.sl-counter {
+  color: #ffffff;
+}

@@ -1,4 +1,5 @@
 export function creatGallery(arr) {
+  //creatGallery;
   return arr
     .map(
       ({
