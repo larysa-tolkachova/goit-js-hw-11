@@ -13,24 +13,24 @@ export function creatGallery(arr) {
       }) =>
         `<li class="gallery-item>
             <a class="gallery-link" href="${largeImageURL}">
-                <img class="gallery-image" src="${webformatURL}" alt="${tags}" width="360" height="150"/>
+                <img class="gallery-image" src="${webformatURL}" alt="${tags}" width="360"/>
             </a>
                 <ul class="inform">
                     <li class="inform-link">
                         <h2 class="inform-title">Likes:</h2>
-                        <p class="inform-dan>${likes}</p>
+                        <p class="inform-dan">${likes}</p>
                     </li>
                     <li class="inform-link">
                         <h2 class="inform-title">Views:</h2>
-                        <p class="inform-dan>${views}</p>
+                        <p class="inform-dan">${views}</p>
                     </li>
                     <li class="inform-link">
                         <h2 class="inform-title">Comments:</h2>
-                        <p class="inform-dan>${comments}</p>
+                        <p class="inform-dan">${comments}</p>
                     </li>
                     <li class="inform-link">
                         <h2 class="inform-title">Downloads:</h2>
-                        <p class="inform-dan>${downloads}</p>
+                        <p class="inform-dan">${downloads}</p>
                     </li>
                 </ul>
             

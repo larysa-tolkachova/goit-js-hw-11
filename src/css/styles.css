@@ -29,14 +29,16 @@ img {
 }
 
 .conteiner {
+  width: 1440px;
+  height: auto;
+  padding: 36px 156px;
 }
 
 .group-form {
   display: flex;
   gap: 8px;
   justify-content: center;
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .input {
@@ -86,14 +88,30 @@ img {
 .style-submit:hover {
   background-color: #6c8cff;
 }
-
+/* ==================================================================================== */
 /*Spinner*/
 .loader {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
   text-align: center;
+  animation: blink 1.5s infinite; /* Анімація для ефекту */
+}
+
+/* Анімація блимання */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 /* end Spinner*/
 
-/* ========================================== */
+/* ============================================================================================== */
 /* render-function */
 .gallery {
   display: flex;
@@ -105,29 +123,25 @@ img {
   border: 1px solid #808080;
 }
 
-.gallery-link {
-  /* flex-basis: calc((100% - 48px) / 3); */
-}
-
 .gallery-image {
-  display: block;
 }
 
 .inform {
   display: flex;
   padding-top: 4px;
   padding-bottom: 4px;
+  justify-content: space-around;
 }
 
 .inform-link {
 }
 
 .inform-title {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 16px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
-  text-align: left;
+  text-align: center;
   color: #2e2f42;
 }
 
@@ -136,11 +150,11 @@ img {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.04em;
-  text-align: left;
+  text-align: center;
   color: #2e2f42;
 }
-*/
 
+/* ================================================================================ */
 /* модальне вікно */
 
 div.sl-overlay {
