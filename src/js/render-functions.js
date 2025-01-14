@@ -13,7 +13,7 @@ export function creatGallery(arr) {
       }) =>
         `<li class="gallery-item>
             <a class="gallery-link" href="${largeImageURL}">
-                <img class="gallery-image" src="${webformatURL}" alt="${tags}" width="360"/>
+                <img class="gallery-image" src="${webformatURL}" alt="${tags}" width="360" height="152"/>
             </a>
                 <ul class="inform">
                     <li class="inform-link">

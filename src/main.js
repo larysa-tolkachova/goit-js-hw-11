@@ -12,21 +12,26 @@ const loader = document.querySelector('.loader');
 
 loader.style.display = 'none';
 
+// для ініціалізації модального вікна
+const galleryModal = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+// ==============================================
+
 form.addEventListener('submit', handlerSearch);
 
 function handlerSearch(event) {
   event.preventDefault();
 
   let question = event.target.elements.query.value.trim(); // input world
-  console.log(event.target.elements);
-  console.log(question);
 
   gallery.innerHTML = ' ';
 
   if (!question) {
     iziToast.show({
       backgroundColor: '#EF4040',
-      title: '',
       message: `Enter the data for the search!`,
       messageColor: '#FFFFFF',
       position: 'topRight',
@@ -48,12 +53,12 @@ function handlerSearch(event) {
           backgroundColor: '#EF4040',
           messageColor: '#FFFFFF',
           message: `Sorry, there are no images matching your search query. Please try again!`,
-          position: 'topRight',
+          position: 'topCenter',
         });
       }
 
       gallery.insertAdjacentHTML('beforeend', creatGallery(data.hits));
-      // galleryModal.refresh();
+      galleryModal.refresh();
       loader.style.display = 'none';
     })
 
@@ -62,10 +67,3 @@ function handlerSearch(event) {
     })
     .finally(() => event.target.reset());
 }
-
-// для ініціалізації модального вікна
-const galleryModal = new SimpleLightbox('.gallery a', {
-  captions: true,
-  captionsData: 'alt',
-  captionDelay: 250,
-});
