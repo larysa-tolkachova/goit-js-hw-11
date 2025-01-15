@@ -43,10 +43,6 @@ function handlerSearch(event) {
 
   serviceImages(question) //promise
     .then(data => {
-      console.log(data);
-      console.log(data.hits.length);
-      console.log(data.hits);
-
       if (data.hits.length === 0) {
         iziToast.show({
           title: '',
