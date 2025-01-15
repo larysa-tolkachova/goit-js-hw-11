@@ -1,5 +1,7 @@
+import SimpleLightbox from 'simplelightbox'; // Описаний в документації
+import 'simplelightbox/dist/simple-lightbox.min.css'; // Додатковий імпорт стилів
+
 export function creatGallery(arr) {
-  //creatGallery;
   return arr
     .map(
       ({
@@ -13,7 +15,7 @@ export function creatGallery(arr) {
       }) =>
         `<li class="gallery-item>
             <a class="gallery-link" href="${largeImageURL}">
-                <img class="gallery-image" src="${webformatURL}" alt="${tags}" width="360" height="152"/>
+                <img class="gallery-image" src="${webformatURL}" alt="${tags}" width="360"/>
             </a>
                 <ul class="inform">
                     <li class="inform-link">
